@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     // --- CONFIGURAÇÕES ---
-    const CORRECT_PASSWORD = 'recuperacao';
+    const CORRECT_PASSWORD = 'h3l1x_2025';
 
     // --- ELEMENTOS DA UI ---
     const loginContainer = document.getElementById('login-container');
@@ -115,5 +115,6 @@ document.addEventListener('DOMContentLoaded', () => {
             startSelfDestruct();
         }
     });
+
 
 });
