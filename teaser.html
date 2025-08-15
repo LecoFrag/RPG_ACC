@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRANSMISSÃO CRIPTOGRAFADA</title>
+    <link rel="stylesheet" href="teaser_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="scanlines"></div>
+
+    <div id="login-container">
+        <div class="window" id="login-window">
+            <div class="window-header">
+                <span class="window-title">[ E-MAIL CRIPTOGRAFADO ]</span>
+            </div>
+            <div class="window-content" id="login-content">
+                <h3>// INSERIR SENHA PARA ACESSO</h3>
+                <input type="password" id="password-input" autocomplete="off" autofocus>
+                <button id="login-btn">DECRIPTAR</button>
+                <p id="error-message" class="hidden">>> ACESSO NEGADO: SENHA INCORRETA <<</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="email-container" class="hidden">
+        <div class="window" id="email-window">
+            <div class="window-header">
+                <span class="window-title">[ CAIXA DE ENTRADA SEGURA ]</span>
+            </div>
+            <div class="window-content" id="email-content">
+                <pre id="email-headers">
+De: &lt;endereço_criptografado_7xZ-9b1@proton.net&gt;
+Para: [Contato do Jogador]
+Assunto: Proposta Confidencial: Serviço de Recuperação
+------------------------------------------------------------------</pre>
+                <pre id="email-body">
+Se esta mensagem chegou até você, é porque sua reputação — e a do seu time — os precede em certos círculos onde a discrição é tão valiosa quanto a competência.
+
+Falo em nome de um cliente com interesses particulares que necessita de um serviço de recuperação. O trabalho é direto, mas exige uma equipe capaz de operar de forma independente e fora dos canais convencionais.
+
+Há alguns dias, uma carga de nosso interesse foi... adquirida... pela corporação Helix Dynamics. Desde então, seu paradeiro é desconhecido.
+
+No anexo, você encontrará um único arquivo de vídeo (helix_dock_7.mp4). São imagens de baixa resolução de um pátio portuário, gravadas à noite. É a última vez que tivemos confirmação visual da carga. Preste atenção no contêiner com a marcação específica — ele é o seu alvo.
+
+Sua missão, caso decida aceitá-la, consiste em:
+<ul>
+    <li>Localizar a carga atualmente em posse da Helix.</li>
+    <li>Descobrir sua rota de transporte e seu destino final.</li>
+    <li>Interceptar e recuperar o contêiner de forma segura.</li>
+    <li>Entregá-lo, intacto, em um ponto seguro que será designado posteriormente.</li>
+</ul>
+O conteúdo da carga é irrelevante para o sucesso da operação. Tentar inspecioná-lo será considerado uma quebra de contrato.
+
+A compensação por este serviço é substancial e será paga integralmente após a entrega.
+
+Se houver interesse, responda a este e-mail com uma única palavra: "Aceito". Não inclua mais nada na sua resposta.
+
+Após a confirmação, vocês receberão as coordenadas e um protocolo para encontrar um contato inicial. Este contato possui informações vitais que facilitarão os primeiros passos da operação.
+
+Aguardamos sua resposta.
+
+Atenciosamente,
+W.
+                </pre>
+                <div id="email-actions">
+                    <button id="view-video-btn">[ EXIBIR ANEXO: helix_dock_7.mp4 ]</button>
+                    <div id="response-area">
+                        <span>RESPOSTA:</span>
+                        <input type="text" id="response-input" autocomplete="off">
+                        <button id="send-response-btn">ENVIAR</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="video-overlay" class="hidden">
+        <video id="mission-video" src="carga_alvo.mp4" controls></video>
+        <button id="close-video-btn">[ FECHAR VISUALIZADOR ]</button>
+    </div>
+
+    <div id="deleting-overlay" class="hidden">
+        <pre id="deleting-text"></pre>
+    </div>
+
+    <script src="teaser_script.js"></script>
+</body>
+</html>
